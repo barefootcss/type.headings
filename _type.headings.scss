@@ -1,0 +1,75 @@
+// 
+// Declarations  
+// ========================================================================== 
+
+// 
+// Defaults:
+// 
+
+$bare-heading-font-weight:		300 !default;
+
+/* 
+   #headings
+   ========================================================================== */
+
+/**
+ * The headings module provides additional styles for headings.
+ */
+
+h1, %bare-h1 {
+	@include bareFz($bare-fz-xxl / $bare-text-scale);
+}
+
+h2, %bare-h2 {
+	@include bareFz($bare-fz-xl / $bare-text-scale);
+}
+
+h3, %bare-h3 {
+	@include bareFz($bare-fz-l / $bare-text-scale);
+}
+
+h4, %bare-h4 {
+	@include bareFz($bare-fz-m);
+}
+
+h5, %bare-h5 {
+	@include bareFz($bare-fz-s);
+}
+
+h6, %bare-h6 {
+	@include bareFz($bare-fz-xs);
+}
+
+/**
+ * @media: Increase the 'font-size'. 
+ */
+
+@media (min-width: bareEm($bare-bp-s)) {
+
+	h1, %bare-h1 {
+		@include bareFz($bare-fz-xxl);
+	}
+
+	h2, %bare-h2 {
+		@include bareFz($bare-fz-xl);
+	}
+
+	h3, %bare-h3 {
+		@include bareFz($bare-fz-l);
+	}
+
+}
+
+/**
+ *  Set some rules across all headings.
+ */
+
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6 {
+ 	font-weight: $bare-heading-font-weight;
+ 	text-rendering: optimizeLegibility;
+ }
