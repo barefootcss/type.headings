@@ -15,17 +15,17 @@ $bare-heading-font-weight:		300 !default;
 /**
  * The headings module provides additional styles for headings.
  */
-
+ 
 h1, %bare-h1 {
-	@include bareFz($bare-fz-xxl / $bare-text-scale);
+	@include bareFz($bare-fz-xxl);
 }
 
 h2, %bare-h2 {
-	@include bareFz($bare-fz-xl / $bare-text-scale);
+	@include bareFz($bare-fz-xl);
 }
 
 h3, %bare-h3 {
-	@include bareFz($bare-fz-l / $bare-text-scale);
+	@include bareFz($bare-fz-l);
 }
 
 h4, %bare-h4 {
@@ -38,26 +38,6 @@ h5, %bare-h5 {
 
 h6, %bare-h6 {
 	@include bareFz($bare-fz-xs);
-}
-
-/**
- * @media: Increase the 'font-size'. 
- */
-
-@media (min-width: bareMedia($bare-bp-s)) {
-
-	h1, %bare-h1 {
-		@include bareFz($bare-fz-xxl);
-	}
-
-	h2, %bare-h2 {
-		@include bareFz($bare-fz-xl);
-	}
-
-	h3, %bare-h3 {
-		@include bareFz($bare-fz-l);
-	}
-
 }
 
 /**
